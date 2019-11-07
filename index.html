@@ -4,16 +4,35 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
     <style>
 body {
 font-family: 'Courier New', Courier, monospace;
 font-style: inherit;
 color:black
+
+display: grid;
+grid-template-columns: 1fr 2fr;
+gap: 20px
 }
-
-
-
+header{
+  grid-column-start: 1;
+  grid-column-end: 3;
+  background-color: transparent;
 }
+main{
+  grid-column-start: 2;
+  grid-column-end: 3;
+  grid-row-start: 2;
+  grid-row-end: 3;
+  }
+  aside{
+    grid-column-start: 1;
+    grid-column-end:2 ;
+    grid-row-end: 1;
+  grid-row-end: 2;
+  }
+
 h1{
   text-align: center;
         font-family: Georgia, 'Times New Roman', Times, serifs;
@@ -62,26 +81,32 @@ line-height: 1.4;
 
   <body>
     <header>
-      <h1>BWAM CAMEROON</h1>
-      <figure>
-      <img src="img/sm-colors-4.jpg" alt="Natural soft Makeup">
-      <img sizes="200px">
-      <figcaption>NaturalGlam</figcaption>
+        <h1>THE CAMEROONIAN MAKEUP ARTIST</h1>
+      <main>
+          <p class="intro">BWAM’s Makeup Artistry specializes in Bridal, Editorial and Special Events. She is dedicated to making your events and photoshoots a magical experience worth remembering!  We arrive early and come equipped to serve you and your attendants in a zero-stress environment.  We offer elite artistry and can be trusted to enhance your most beautiful features with less product. From start to finish, you can have confidence that our team will deliver a luxury experience from the time you sit in the chair up until moments before arriving at your event.
+              
+              <figure>
+              <img src="img/audrey.png" alt="Natural soft Makeup">
+              <figcaption>NaturalGlam</figcaption>
+          </figure>
+            </main>
 
-    </figure>
-      <div>
-      <p class="intro">BWAM’s Makeup Artistry specializes in Bridal, Editorial and Special Events. She is dedicated to making your events and photoshoots a magical experience worth remembering!  We arrive early and come equipped to serve you and your attendants in a zero-stress environment.  We offer elite artistry and can be trusted to enhance your most beautiful features with less product. From start to finish, you can have confidence that our team will deliver a luxury experience from the time you sit in the chair up until moments before arriving at your event.
-        </div>
-      </header>
-    <main>
-        <h2>BRIDAL MAKEUP</h2> 
-            <li><a href="color/index.html">Color swatches and tokens</a></li>
-        
-        <h3>SPECIAL EVENTS</h3> 
-          <li><a href="talks/">Talks</a></li>
-          <li><a href="teaching/">Teaching</a></li>       
+     
+          <aside>
+      
+          <h2>BRIDAL MAKEUP</h2> 
+          <li><a href="color/index.html">Color swatches and tokens</a></li>
+      
+      <h3>SPECIAL EVENTS</h3> 
+        <li><a href="talks/">Talks</a></li>
+        <li><a href="teaching/">Teaching</a></li>       
 <h4>EDITORIAL</h4>
-    </main>
+  </aside>
+      <footer> BWAM2019</footer>
+
+      
+      
+       </main>
     <aside>
         <li><a href="https://github.com/scottgruber/academic-jumpstart">Get the starter kit code</a></li>  
     </aside>
