@@ -2,150 +2,198 @@
 
 <html lang="en">
 
-<head>
+  <head>
 
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="format-detection" content="telephone=no" />
+    <title>Beauty with Ayuk Mpey</title>
+    <link rel="stylesheet" href="css/styles.css" />
 
-  <style>
-    body {
-      font-family: 'Courier New', Courier, monospace;
-      color: black;
-      display: grid;
-      grid-template-columns: 1fr 2fr;
-      gap: 30px;
-    }
+    <style>
+      body {
+        color: var(--black-80);
+        font-family: var(--font-family);
+        font-size: var(--font-size);
+        line-height: var(--line-height-text);
+        margin: 10px;
+        min-width: 100vw;
+        min-height: 100vh;
+        scroll-behavior: smooth;
+        text-rendering: optimizeSpeed;
 
-    header {
-      font-family: 'Sanchez', serif;
-      grid-column-start: 1;
-      grid-column-end: 3;
-      background-color: transparent;
-    
-    }
-
-    main {
-      grid-column-start: 2;
-      grid-column-end: 3;
-      grid-row-start: 2;
-      grid-row-end: 3;
-    }
-
-    aside {
-      grid-column-start: 1;
-      grid-column-end: 2;
-      grid-row-start: 2;
-      grid-row-end: 3;
-    }
-
-    footer {
-      grid-column-start: 1;
-      grid-column-end: 4;
-      background-color: transparent;
-    }
-
-    h1 {
-      text-align: center;
-      font-family: Georgia, 'Times New Roman', Times, serif;
-      font-size: 60px;
-      color: rgb(255, 0, 55);
-    }
-
-    .intro {
-      color: rgba(12, 11, 9, 0.856);
-      background-color: unset;
-      font-style: italic;
-      font-size: large;
-      
       }
 
-    a {
-      text-decoration:none;
-    }
-
-    a:hover {
-
-      color: rgba(255, 0, 128, 0.63);
-      text-decoration:yellow;
-    }
-
-    h2 {
-      font-family: serif;
-      font-size: 32px;
-      font-style: oblique;
-      color: blueviolet;
-    }
-
-    h3 {
-      font-family: serif;
-      font-size: 32px;
-      font-style: oblique;
-      color: blueviolet;
-    }
-
-    h4 {
-      font-family: serif;
-      font-size: 32px;
-      font-style: oblique;
-      color: blueviolet;
-    }
-    h5 {
-      font-family: serif;
-      font-size: 32px;
-      font-style: oblique;
-      color: blueviolet;
-    }
-    p {
-      font-family: Arial;
-      font-size: 18px;
-      line-height: 1.4;
-    }
-  </style>
-  <title>beautywithAyukMpey</title>
-</head>
-
-<body>
-  <header>
-
-    <h1>BWAM’s MAKEUP ARTISTRY</h1>
-    <p><a href="talks">VIEW GALLERY</a></P>
+      header h1 {
+        font-weight: var(--font-family-light);
+        font-size: var(--font-size-large);
+        text-align: center;
+      }
 
 
 
-  </header>
-  <main>
-    <figure>
-      <img src="img/audrey.png" alt="Natural soft Makeup">
-      <figcaption>NaturalGlam</figcaption>
-    </figure>
-
-    <p> We are dedicated to serve you and your attendants in a zero-stress environment. We offer elite artistry and can
-      be trusted to
-      enhance your most beautiful features with less product. From start to finish, you can have confidence that our
-      team will deliver a luxury experience from the time you sit in the chair up until moments before arriving at
-      your event.</p>
+      header nav ul {
+        display: flex;
+        justify-content: center;
+        list-style: none;
+      }
 
 
-  </main>
+      header nav a {
+        text-decoration: none;
+        margin-right: 1em;
+      }
+
+      header nav a:hover {
+        color: hotpink;
+        text-decoration: underline;
+        margin-right: 1em;
+      }
+
+      .cover {
+        z-index: -1;
+        object-fit: cover;
+        height: 100vh;
+        width: 100vw;
+        grid-column: 1;
+        grid-row: 1 / -1;
+      }
 
 
-  <aside>
-    <P>OUR SERVICES</P>
+      main {
+        grid-row: 2;
+      }
 
-   <hr> <h2>BRIDAL MAKEUP</h2> </hr>
-    
-    <hr><h3>SPECIAL EVENTS MAKEUP</h3></hr>
-   <hr> <h4>EDITORIAL MAKEUP</h4></hr>
-    <hr><h5>SKIN CARE,MAKEUP & BODY SUIT SALES</h5></hr>
-    
+      main h1 {
+        font-size: var(--font-size-xxx-large);
+        text-transform: uppercase;
+      }
 
-  </aside>
-  <footer>Powered by beautywithAyukMpey</footer>
+      main h1 span {
+        display: block;
+      }
+
+      main .standfirst {
+        text-transform: uppercase;
+      }
+
+      main p:not(.standfirst) {
+        background-color: hotpink;
+        padding: 1em;
+        transform: rotate(-2deg);
+      }
+
+      footer {
+        grid-row: 3;
+      }
+
+      @media (min-width: 48em) {
+
+        body {
+          display: grid;
+          grid-template-columns: 1fr 3fr 2fr 1fr;
+          grid-template-rows: minmax(0, 100px) 1fr minmax(0, 100px);
+          gap: 1vw;
+          margin: 20px;
+        }
+
+        header {
+          grid-column: 2 / -1;
+          grid-row: 1;
+          display: flex;
+        }
+
+        header h1 {
+          font-size: var(--font-size-display);
+          color: white;
+          text-shadow: 1px 1px 1px hotpink;
+          text-align: left;
+        }
+
+        header nav {
+          margin-left: auto;
+          margin-right: 3rem;
+        }
+
+        header nav a {
+          color: white;
+          text-decoration: none;
+          margin-right: 1em;
+        }
 
 
 
+        .cover {
+          grid-column: 1 / -1;
+          grid-row: 1 / 4;
+        }
+
+        main {
+          grid-row: 2;
+          grid-column: 2 / 3;
+          align-self: center;
+          margin-top: 20rem;
+        }
+
+        main h1 {
+          margin: 0;
+          font-size: var(--font-size-xxx-display);
+          color: white;
+          text-shadow: 1px 1px 2px black;
+          
+        }
+
+        main .standfirst {
+          text-transform: uppercase;
+          color: white;
+          text-shadow: 1px 1px 2px black;
+        }
 
 
-</body>
+        footer {
+          grid-row: 3;
+          grid-column-start: 1;
+          grid-column-end: 4;
+          align-self: end;
+          margin: 1rem;
+        }
+
+      }
+
+    </style>
+
+  </head>
+
+  <body>
+    <header>
+      <h1>BWAM’s MAKEUP ARTISTRY</h1>
+      <nav>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about/index.html">About Me</a></li>
+          <li> <a href="services/index.html">Services</a></li>
+          <li><a href="contact/index.html">Contact</a></li>
+
+        </ul>
+      </nav>
+    </header>
+
+    <img class="cover" src="img/model-headshot.jpg"
+      srcset="img/model-headshot@2x.jpg 2x" alt="Natural soft Makeup">
+
+    <main>
+      <h1>Bridal, Editorial & <span>Special Events Makeup</span></h1>
+      <p class="standfirst">A 3D Makeup Blend</p>
+      <p>We are dedicated to serve you and your attendants in a zero-stress
+        environment. We offer elite artistry and can
+        be trusted to
+        enhance your most beautiful features with less product. From start to
+        finish, you can have confidence that our
+        team will deliver a luxury experience from the time you sit in the chair
+        up until moments before arriving at
+        your event.</p>
+    </main>
+    <footer><small>Powered by beautywithAyukMpey.</small></footer>
+  </body>
 
 </html>
